@@ -1,0 +1,31 @@
+{
+  "name": "radar-memory",
+  "version": "0.1.0",
+  "description": "Shared memory for team chat: groups messages into topics by meaning across DMs and channels, keeps every point's status up to date as later messages arrive (reverse sliding window + radar sweep), and learns from human corrections.",
+  "type": "module",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    }
+  },
+  "files": ["dist", "src", "README.md"],
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "typecheck": "tsc -p tsconfig.json --noEmit",
+    "example": "tsx examples/quickstart.ts"
+  },
+  "engines": { "node": ">=20" },
+  "dependencies": {
+    "@anthropic-ai/sdk": "^1.1.0",
+    "zod": "^4.6.7"
+  },
+  "devDependencies": {
+    "@types/node": "^20",
+    "tsx": "^4.23.15",
+    "typescript": "^5"
+  },
+  "license": "UNLICENSED"
+}
